@@ -17,9 +17,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(morgan('dev'));
 app.use(errorHandler);
-const PORT=process.env.PORT||8000;
+const PORT=process.env.PORT||8080;
 //api routes
 app.use("/api/v1/auth",authRoutes);
-app.listen(8000,()=>{
+app.listen(8080,()=>{
     console.log(`Server running in ${process.env.DEV_MODE} on ${PORT}`);
 });
